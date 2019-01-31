@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="441dp"-->
+        <!--android:layout_height="216dp"-->
+        <!--app:srcCompat="@drawable/image1"-->
+        <!--tools:layout_editor_absoluteX="-32dp"-->
+        <!--tools:layout_editor_absoluteY="0dp" />-->
+    <!---->
+
+    <ImageView
+        android:layout_width="385dp"
+        android:layout_height="200dp"
+        app:srcCompat = "@drawable/image1"
+        android:id="@+id/image"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="81dp"
+            android:text="@string/textview"
+            android:textAlignment="gravity"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:id="@+id/checkbox_burger"
+                android:layout_width="151dp"
+                android:layout_height="83dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/checkbox1"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:textStyle="italic" />
+
+
+            <CheckBox
+                android:id="@+id/checkbox_fries"
+                android:layout_width="151dp"
+                android:layout_height="65dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/checkbox2"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/checkbox_coke"
+                android:layout_width="151dp"
+                android:layout_height="87dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/checkbox3"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:textStyle="italic" />
+
+
+            <!--<Spinner-->
+                <!--android:id="@+id/spinner1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:entries="@array/coke_arrays"-->
+                <!--android:prompt="@string/coke_prompt"-->
+                <!--android:visibility="invisible" />-->
+
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="160dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:text="ORDER"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

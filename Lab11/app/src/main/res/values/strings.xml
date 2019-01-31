@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab11</string>
+    <string name="text_str">Send an Email</string>
+    <string name="like_str">Make a call</string>
+</resources>

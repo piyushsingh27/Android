@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Lab6</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nameerror">Enter Valid Name</string>
+    <string name="emailerror">Enter Valid Email</string>
+    <string name="passworderror">Enter Some Password</string>
+    <string name="mobileerror">Enter Valid Mobile Number</string>
+    <string name="sw_subscription_text">Accept update via email</string>
+    <string name="btn_date_text">Tap to select the date</string>
+    <string name="btn_time_text">Tap to select the time</string>
+    <string name="tv_date_time">Select the attending date and time</string>
+
+    <string-array name="title_array">
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Miss</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BurgerHut</string>
+    <string name="textview">BurgerHut - FoodItems</string>
+    <string name="checkbox1">Burger</string>
+    <string name="checkbox2">Fries</string>
+    <string name="checkbox3">Coke</string>
+    <string name="coke_prompt">Choose your option</string>
+
+    <string-array name="coke_arrays">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/breakfastIB"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="5dp"
+                    android:src="@drawable/test"
+                    android:background="@color/colorBreakfast"
+                    android:scaleType="fitCenter"
+                    android:onClick="menuSelected"/>
+
+                <ImageButton
+                    android:id="@+id/lunchIB"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="5dp"
+                    android:src="@drawable/odi"
+                    android:background="@color/colorLunch"
+                    android:scaleType="fitCenter"
+                    android:onClick="menuSelected"/>
+
+                <ImageButton
+                    android:id="@+id/dinnerIB"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="5dp"
+                    android:src="@drawable/t20"
+                    android:background="@color/colorDinner"
+                    android:scaleType="fitCenter"
+                    android:onClick="menuSelected"/>
+
+                <ImageButton
+                    android:id="@+id/dessertIB"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:padding="5dp"
+                    android:src="@drawable/wc"
+                    android:background="@color/colorDessert"
+                    android:scaleType="fitCenter"
+                    android:onClick="menuSelected"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_container">
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+</LinearLayout>

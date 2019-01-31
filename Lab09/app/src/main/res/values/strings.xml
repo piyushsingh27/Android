@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab09</string>
+    <string name="menu_str">Menu</string>
+    <string name="breakfast_str">Test</string>
+    <string name="lunch_str">ODI</string>
+    <string name="dinner_str">t20</string>
+    <string name="dessert_str">World Cup</string>
+</resources>

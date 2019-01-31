@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LabTest</string>
+
+    <string name="TeamA">Team A</string>
+    <string name="TeamB">Team B</string>
+    <string name="ScoreBoard">Score Board</string>
+    <string name="Runs">Runs</string>
+    <string name="Overs">Overs</string>
+
+    <string name="btn_date_text">Tap to select the date</string>
+    <string name="btn_time_text">Tap to select the time</string>
+</resources>

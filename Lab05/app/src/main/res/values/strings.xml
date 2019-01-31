@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lab05</string>
+    <string name="header">Registration</string>
+    <string name="tv_personal_info">Please enter the following information</string>
+    <string name="tv_date_time">Select the attending date and time</string>
+    <string name="btn_date_text">Tap to select the date</string>
+    <string name="btn_time_text">Tap to select the time</string>
+    <string name="sw_subscription_text">Accept update via email</string>
+    <string name="btn_register">Register</string>
+    <string name="et_hint_phone">Phone Number</string>
+    <string name="et_hint_fname">First Name</string>
+    <string name="et_hint_lname">Last Name</string>
+    <string name="et_hint_email">Email</string>
+    <string name="et_hint_address">Address</string>
+
+    <string-array name="title_array">
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Miss</item>
+    </string-array>
+</resources>
