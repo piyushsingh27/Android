@@ -23,6 +23,9 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+
 public class Main2Activity extends AppCompatActivity
         implements View.OnClickListener {
 
@@ -38,8 +41,8 @@ public class Main2Activity extends AppCompatActivity
 //    static Button timePickerBT;
 //    static Button datePickerBT;
 //
-//    //defining AwesomeValidation object
-//    private AwesomeValidation awesomeValidation;
+    //defining AwesomeValidation object
+    private AwesomeValidation awesomeValidation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,7 @@ public class Main2Activity extends AppCompatActivity
 //        navigationView.setNavigationItemSelectedListener(this);
 //
 //
-//        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         //initializing view objects
         editTextName = (EditText) findViewById(R.id.editTextName);
@@ -83,11 +86,11 @@ public class Main2Activity extends AppCompatActivity
         buttonSubmit = (Button) findViewById(R.id.buttonSubmit);
 
 
-//        //adding validation to edittexts
-//        awesomeValidation.addValidation(this, R.id.editTextName, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
-//        awesomeValidation.addValidation(this, R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);
-//        awesomeValidation.addValidation(this, R.id.editTextPassword, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.passworderror);
-//        awesomeValidation.addValidation(this, R.id.editTextMobile, "^[2-9]{2}[0-9]{8}$", R.string.mobileerror);
+        //adding validation to edittexts
+        awesomeValidation.addValidation(this, R.id.editTextName, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
+        awesomeValidation.addValidation(this, R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);
+        //awesomeValidation.addValidation(this, R.id.editTextPassword, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.passworderror);
+        awesomeValidation.addValidation(this, R.id.editTextMobile, "^[2-9]{2}[0-9]{8}$", R.string.mobileerror);
 
 
         buttonSubmit.setOnClickListener(this);
@@ -162,13 +165,13 @@ public class Main2Activity extends AppCompatActivity
     private void submitForm() {
         //first validate the form then move ahead
         //if this becomes true that means validation is successful
-//        if (awesomeValidation.validate()) {
+        if (awesomeValidation.validate()) {
         Toast.makeText(this, "Registration Successful", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, Main4Activity.class);
         startActivity(intent);
 
         //process the data further
-        // }
+         }
     }
 
 

@@ -37,7 +37,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         //first validate the form then move ahead
         //if this becomes true that means validation is successful
         //if (awesomeValidation.validate()) {
-        Toast.makeText(this, "Registration Successful", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show();
         Intent i = new Intent(this, Main4Activity.class);
         startActivity(i);
     }
