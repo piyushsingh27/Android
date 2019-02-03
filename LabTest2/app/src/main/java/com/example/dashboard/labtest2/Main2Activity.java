@@ -96,71 +96,7 @@ public class Main2Activity extends AppCompatActivity
         buttonSubmit.setOnClickListener(this);
     }
 
-//    private void initView() {
-//        timePickerBT = findViewById(R.id.timeBT);
-//        datePickerBT = findViewById(R.id.dateBT);
-//    }
 
-//    public void showTimePickerDialog(View view) {
-//        DialogFragment newFragment = new TimePickerFragment();
-//        newFragment.show(getSupportFragmentManager(), "timePicker");
-//    }
-//
-//    public static void setTimeText(String timeText) {
-//        timePickerBT.setText(timeText);
-//    }
-//
-//    public void showDatePickerDialog(View v) {
-//        DialogFragment newFragment = new DatePickerFragment();
-//        newFragment.show(getSupportFragmentManager(), "datePicker");
-//    }
-//
-//    public static void setDateText(String dateText) {
-//        datePickerBT.setText(dateText);
-//    }
-//
-//    public static class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
-//        String returnDate;
-//        @Override
-//        public Dialog onCreateDialog(Bundle savedInstanceState) {
-//            // Use the current time as the default values for the picker
-//            final Calendar c = Calendar.getInstance();
-//            int hour = c.get(Calendar.HOUR_OF_DAY);
-//            int minute = c.get(Calendar.MINUTE);
-//
-//            // Create a new instance of TimePickerDialog and return it
-//            return new TimePickerDialog(getActivity(), this, hour, minute,
-//                    DateFormat.is24HourFormat(getActivity()));
-//        }
-//
-//        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-//            StringBuffer temp = new StringBuffer();
-//            temp.append(hourOfDay).append(" : ").append(minute);
-//            setTimeText(temp.toString());
-//        }
-//    }
-//
-//    public static class DatePickerFragment extends DialogFragment
-//            implements DatePickerDialog.OnDateSetListener {
-//
-//        @Override
-//        public Dialog onCreateDialog(Bundle savedInstanceState) {
-//            // Use the current date as the default date in the picker
-//            final Calendar c = Calendar.getInstance();
-//            int year = c.get(Calendar.YEAR);
-//            int month = c.get(Calendar.MONTH);
-//            int day = c.get(Calendar.DAY_OF_MONTH);
-//
-//            // Create a new instance of DatePickerDialog and return it
-//            return new DatePickerDialog(getActivity(), this, year, month, day);
-//        }
-//
-//        public void onDateSet(DatePicker view, int year, int month, int day) {
-//            StringBuffer temp = new StringBuffer();
-//            temp.append(year).append(" / ").append(month + 1).append(" / ").append(day);
-//            setDateText(temp.toString());
-//        }
-//    }
 
     private void submitForm() {
         //first validate the form then move ahead
