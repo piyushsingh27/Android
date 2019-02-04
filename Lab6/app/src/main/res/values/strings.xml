@@ -15,6 +15,8 @@
     <string name="btn_date_text">Tap to select the date</string>
     <string name="btn_time_text">Tap to select the time</string>
     <string name="tv_date_time">Select the attending date and time</string>
+    <string name="text_str">Send an Email</string>
+    <string name="like_str">Make a call</string>
 
     <string-array name="title_array">
         <item>Mr.</item>

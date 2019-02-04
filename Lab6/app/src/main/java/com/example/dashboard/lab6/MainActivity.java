@@ -3,9 +3,14 @@ package com.example.dashboard.lab6;
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +18,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.NotificationCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.util.Patterns;
@@ -51,6 +57,11 @@ public class MainActivity extends AppCompatActivity
 
     static Button timePickerBT;
     static Button datePickerBT;
+
+    private static final int NOTI_ID = 0;
+
+    private final String CHANNEL_ID = "personal_notifications";
+    private final int NOTIFICATION_ID = 001;
 
     //defining AwesomeValidation object
     private AwesomeValidation awesomeValidation;
@@ -178,10 +189,66 @@ public class MainActivity extends AppCompatActivity
         //if this becomes true that means validation is successful
         if (awesomeValidation.validate()) {
             Toast.makeText(this, "Registration Successful", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, Main2Activity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, Main2Activity.class);
+            //startActivity(intent);
+
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","piyush.singh@mca.christuniverisy.in", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Greeting Piyush!");
+            PendingIntent emailPendingIntent = PendingIntent.getActivity(this, NOTI_ID,
+                    emailIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "919046392720"));
+            PendingIntent callPendingIntent = PendingIntent.getActivity(this, NOTI_ID,
+                    callIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            createNotificationChannel();
+
+            NotificationCompat.Builder builder =
+                    new NotificationCompat.Builder(this)
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setLargeIcon(BitmapFactory.decodeResource(this.getResources(),R.mipmap.ic_launcher))
+                            .setContentTitle("Registration Successful")
+                            .setContentText("Thank you for registering...........")
+                            .setStyle(new NotificationCompat.BigTextStyle()
+                                    .bigText("Thank you for registering..........." +
+                                            "Your Registration was successful"))
+                            .addAction(R.drawable.sms, getResources().getString(R.string.text_str), emailPendingIntent)
+                            .addAction(R.drawable.like, getResources().getString(R.string.like_str), callPendingIntent)
+                            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+            Intent notificationIntent = new Intent(this, Main2Activity.class);
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+            builder.setContentIntent(contentIntent);
+
+            // Add as notification
+            NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            manager.notify(NOTI_ID, builder.build());
 
             //process the data further
+        }
+
+    }
+
+    private void createNotificationChannel()
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Personal Notifications";
+            String description = "Include all the personal notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+
+            notificationChannel.setDescription(description);
+
+//            new AudioAttributes.Builder().setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+//                    .setLegacyStreamType(AudioManager.STREAM_NOTIFICATION)
+//                    .setUsage(AudioAttributes.USAGE_NOTIFICATION_EVENT)
+//                    .build();
+
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(notificationChannel);
         }
     }
 
