@@ -11,4 +11,9 @@
     <string name="emailerror">Enter Valid Email</string>
     <string name="passworderror">Enter Some Password</string>
     <string name="mobileerror">Enter Valid Mobile Number</string>
+    <string name="menu_str">Menu</string>
+    <string name="breakfast_str">Test</string>
+    <string name="lunch_str">ODI</string>
+    <string name="dinner_str">t20</string>
+    <string name="dessert_str">World Cup</string>
 </resources>
