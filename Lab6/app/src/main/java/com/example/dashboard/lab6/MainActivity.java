@@ -9,6 +9,7 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -53,7 +54,15 @@ public class MainActivity extends AppCompatActivity
 
     private RadioButton radio_male, radio_female;
 
-    private Button buttonSubmit;
+    private Button buttonSubmit,b1, b2, b3;
+    SharedPreferences sharedpreferences;
+
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "nameKey";
+    public static final String Phone = "phoneKey";
+    public static final String Email = "emailKey";
+    public static final String Password = "passkey";
+    public static final String Address = "addresskey";
 
     static Button timePickerBT;
     static Button datePickerBT;
@@ -106,6 +115,67 @@ public class MainActivity extends AppCompatActivity
         radio_female = findViewById(R.id.radio_female);
 
         buttonSubmit = (Button) findViewById(R.id.buttonSubmit);
+        b1=(Button)findViewById(R.id.button);
+        b2 = findViewById(R.id.button1);
+        b3 = findViewById(R.id.button2);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String n = editTextName.getText().toString();
+                String em = editTextEmail.getText().toString();
+                String pass = editTextPassword.getText().toString();
+                String mob = editTextMobile.getText().toString();
+                String addr = editTextAddress.getText().toString();
+
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+
+                editor.putString(Name, n);
+                editor.putString(Phone,mob);
+                editor.putString(Email,em);
+                editor.putString(Password,pass);
+                editor.putString(Address,addr);
+                editor.commit();
+                Toast.makeText(MainActivity.this, "Thanks for Saving", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sharedpreferences.contains(Name)) {
+                    editTextName.setText(sharedpreferences.getString(Name, ""));
+                }
+
+                if (sharedpreferences.contains(Email)) {
+                    editTextEmail.setText(sharedpreferences.getString(Email, ""));
+                }
+
+                if (sharedpreferences.contains(Password)) {
+                    editTextPassword.setText(sharedpreferences.getString(Password, ""));
+                }
+
+                if (sharedpreferences.contains(Phone)) {
+                    editTextMobile.setText(sharedpreferences.getString(Phone, ""));
+                }
+
+                if (sharedpreferences.contains(Phone)) {
+                    editTextAddress.setText(sharedpreferences.getString(Address, ""));
+                }
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTextName.setText("");
+                editTextEmail.setText("");
+                editTextPassword.setText("");
+                editTextMobile.setText("");
+                editTextAddress.setText("");
+            }
+        });
 
 
         //adding validation to edittexts

@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/piyush/AndroidStudioProjects/Externalfile/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/home/piyush/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/fa722994692e297b2080b3e34e7c3b02/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        }
+    ]
+}

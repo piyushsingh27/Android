@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/piyush/AndroidStudioProjects/Externalfile/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/home/piyush/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/fa722994692e297b2080b3e34e7c3b02/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}
